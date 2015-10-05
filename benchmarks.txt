@@ -1,0 +1,15 @@
+Bench Marks:
+
+-rw-r--r--   1 bozo     tgcm     87760896 Oct  1  1998 /usr/madrigal/files/stage/aro850423a.cbf
+-rw-r--r--   1 bozo     tgcm     53530624 Oct  6  1998 /usr/madrigal/files/stage/whf970409a.cbf
+-rw-r--r--   1 bozo     tgcm     127332352 Jun 11  1999 /usr/madrigal/files/stage/whf980924a.cbf
+
+1.- /usr/madrigal/files/stage/whf970409a.cbf
+
+2.- /usr/madrigal/files/stage/aro850423a.cbf
+
+3.- /usr/madrigal/files/stage/whf980924a.cbf
+
+
+
+

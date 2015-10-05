@@ -1,0 +1,31 @@
+
+	$Id: NEWS 18597 2008-04-11 04:00:54Z pwest $
+
+News for version 2.2.2, 30 February 2012
+
+Added -k option to cedardump to display the kinst/kindat/jpar vars/mpar
+vars groupings.
+
+Minor bug fixes. Code brought up to libdap 3.11.2 and bes.3.10.x
+
+Code cleaned up in some areas, documentation added
+
+libCedar library versioning updated to 2.0.0 for version 2.2.2 of the
+software. This is the first time we've followed the GNU libtool
+versioning requirements.
+
+News for version 2.2.1, 5 June 2010
+
+Minor bug fixes. Code brought up to libdap 3.10.x and bes 3.8.x.
+
+News for version 2.1.1, 16 April 2008
+
+This is the first official release of the Cedar++ software. Although the
+software has been in use on the cedarweb.hao.ucar.edu web site, we have not
+yet had a release of the Cedar++ library.
+
+We have recently changed from using a parameter codes header file and an
+instrument KINST header file and instead are accessing information about
+parameters and instruments from the CEDARCATALOG database. Database access
+is done in the cedar_handler OPeNDAP module code and not in this library.
+

@@ -1,0 +1,247 @@
+/**
+@name Cedar++
+
+
+\begin{center}
+{\Large{\bfSummary}}
+\end{center}
+
+The CEDAR database is located across binary files (from now we will mention those files as cbf files ); not a RDBMS like Oracle,
+just files. Any program trying to extract data from those files needs a set of functions to get that job done. If those functions do not
+exist a programmer must create them with implications in time, resources, etc. 
+
+What is a CEDAR API? It is a set of C++ classes that allow you to transparent connect to cbf files , extract chunks of meaningful
+data, subset the extracted data, validate data based on some criteria, etc. 
+
+The CEDAR API on the large scale consists of an interface and an internal implementation. For programmers interested in just
+using the interface, documentation in CHAPTER 2 is all they need. For a full detailed description of how this API was created refer
+to CHAPTER 3 of this document. 
+
+Is is very important to make clear that a cbf file's physical record structure  for historical reasons is based on COS (Cray
+Operative System) blocking and that the access style of the data is based on tapes. These elements add extra complexity to the
+API because the library must extract the data as it is packed inside the cbf files dealing with Cray Blocking and sequential access.
+
+As of this release of the API, the C++ classes do not have write capabilities, so the connection to cbf files is read-only.
+
+\begin{center}
+{\Large{\bfAn overview of the problem at hand.}}
+\end{center}
+
+The COS blocking system and the CEDAR Format
+
+First we must understand the general idea of the COS blocking system and how it packs pieces of data called Physical Records.
+To do that lets analyze the next image: 
+  
+\URL[Levels of packeting]{CedarLevelsPack.jpg}
+                                                                 
+  
+  
+
+As you can see there are three levels of packeting. 
+
+In LEVEL 1 COS blocking is used to put together Physical Records in files and those files into a dataset. The word file here is very
+confusing because it refers to a chunk of data between two EOF control words and not to a file as we know it in terms of the Unix
+File System (UFS). 
+
+In LEVEL 2 we can see that the previously mentioned Physical Records are packages themselves (this is the CEDAR Format) as
+they contain control words and logical records. 
+
+In LEVEL 3 the logical records is the information contained in the data area which its corresponding prologue. 
+
+For these concepts, lets introduce the basic terminology: 
+
+- cbf file: this is the dataset and matches the idea of file in UFS. For the remainder of this document a cbf files is a file in which the
+physical records are put together using COS blocking. 
+
+- group: To avoid the confusion with the word file we use the word group. A group contains multiple records related within a
+dataset and it is equal to the word file in terms of COS Blocking. 
+
+- physical Record: It is the block packing as defined in LEVEL 2. 
+
+- logical Record: The information packed as prologue and data areas contained inside the Physical Record as defined in LEVEL
+3. 
+
+If you need detailed information about COS blocking or the CEDAR Database Format read the COS reference manual or the
+document titled "CEDAR DATA BASE FORMAT" from May 1990. 
+  
+
+Ideas for classes  based on the concepts previous explained
+
+The first concept with which we are dealing it is the concept of a cbf files. We call this class: 
+
+class CedarFile
+{
+...
+};
+
+An object of the class CedarFile: 
+
+- Establishes file connection to one and only one cbf file 
+
+- Retrieves independent physical records from the cbf file in sequence 
+
+- Retrieves the physical records in groups indicated by EOF Cray control words. 
+
+- Breaks connection to the cbf file. 
+
+For the concept of physical record we will create: 
+
+class CedarBlock 
+{
+...
+};
+
+An object of the class CedarBlock: 
+
+- Holds in memory a complete physical Record extracted by an object CedarFile 
+
+- Retrieves independent logical records from the Physical Record in sequence 
+
+For the concept of logical Record we have the class: 
+
+class CedarLogicalRecord
+{
+...
+};
+
+An object of the class CedarLogicalRecord: 
+
+- Represents the abstract idea of a logical Record (as virtual functions) for later specialization by derived classes 
+
+- Using run time polymorphism allows you to control a complete derived logical record object extracted from within a CedarBlock
+object. 
+
+The word specialization was mentioned just in the last paragraph. Why is that? We said that Logical records is an abstract idea
+that puts together as one thing the different type of records for data and metadata. Those are: Header Records, Catalog Records
+and Data records using the CEDAR database definitions. By deriving from the abstract class CedarLogicalRecord we can create
+classes to encapsulate the attributes and functionality of the three types of data and metadata records. Those classes are: 
+
+class CedarDataRecord : public CedarLogicalRecord
+{
+...
+}
+
+class CedarCatalogRecord : public CedarLogicalRecord
+{
+...
+}
+
+class CedarHeaderRecord : public CedarLogicalRecord
+{
+...
+}
+
+The CEDAR database format uses Universal Time to indicated the time of a logical record. A UT consist of four positive integers to
+indicate year, month-day, hour-minute and centisecond. Relational operations as well as data encapsulation for dates is managed
+by the class: 
+
+class CedarDate
+{
+...
+};
+
+Finally it is important to mention a class that has not been fully implemented yet but it has been designed to match the concept of a
+group. This class is CedarGroup and has the following high level declaration: 
+
+class CedarGroup
+{
+...
+};
+
+An object of the class CedarGroup is designed to retrieve a set of CedarBlock that are related together by two EOF control words
+as they represent an experiment . This class implementation is pending in a future release. 
+  
+\begin{center}
+{\Large{\bf Miscellaneous Notes.}}
+\end{center}
+
+1.- Casting from data type "field" to data type "date_field"
+
+There is a major source of possible run time errors when calling CedarDate::set_date because if you place a negative value as any
+of the date_field arguments, automatic "casting" (casting is here in double quotes because this is not casting but rather cutting and
+trashing) will occur and you can end having trash values. I say this is a major source of error because for example the function
+CedarDate::validate_field called by CedarDate::set_date DOES NOT HAVE any control on values that have been "casted." For
+example lets say this trivial program: 
+\begin{verbatim}
+      #include "CedarDate.h"
+      main ()
+      {
+       CedarDate dt;
+       dt.set_date (-12,13,14,15);
+       ofstream st;
+       dt.save_date_us_format (&st);
+      }
+\end{verbatim}
+by placing -12 as the first argument, you will be placing the complement two representation of -12 like this
+11111111111111111111111111110100 only 16 bits may be used because a date_field is two bytes so you end up with passing
+this value, 1111111111110100 that is 65524, so instead of -12 you get 65524. Another example could be that if instead of passing
+-12 you pass -456789045 in this case the complement two representation is; 11100100110001011111001111001011 taking only
+the right most sixteen bits we get 1111001111001011 that is 62411. Again when the values are used by validate_fields, they have
+been "casted" already and there is not way to know if those values are indeed unsigned short integers. You should get sure the
+arguments are not negative before calling CedarDate::set_date(date_field, date_field, date_field, date_field) 
+
+CONCLUSION: Remember to question: is field < 0 ? if yes do not create CedarDate objects with that value. 
+
+2.- Instantiating classes with mixed versions of the CedarArray Template
+
+There are two versions of CedarArray template. First we have the LOGGING_WITH_CEDARDUMP version that is design on top
+of the CedarDump class. This extra code is there to help you to trace calls of the member functions of any class that you may
+instantiate based on CedarArray. The second version is the fast performance because no tracing code base on CedarDump is
+present. One version or the other are generated on the fly by the C++ pre-processor. The pre-processor knows which version
+must be created by the macro definition LOGGING_WITH_CEDARDUMP. Some run time errors can be created if you mix modules
+that have defined the LOGGING_WITH_CEDARDUMP macro with modules that have not. For example pay close attention to the
+following code; 
+\begin{verbatim}
+a.cc: 
+
+     #include "CedarArray.h"
+
+     CedarArray <int> t(2,1);
+     void test();
+
+     main()
+     {
+     test();
+     }
+
+b.cc: 
+
+     #define LOGGING_WITH_CEDARDUMP
+     #include "CedarArray.h"
+
+     extern CedarArray <int> t;
+
+     void test()
+     {
+       t[1]=123;
+       cout<<t[1]<<endl;
+     }
+\end{verbatim}
+a.cc and b.cc include "CedarArray.h" and by looking at the relationship diagram we can see that CedarArray.h includes
+CedarAPIVersion.h. Now lets assume the following scenario: in the file CedarAPIVersion.h the macro
+LOGGING_WITH_CEDARDUMP is not defined (it is commented out.) because you do not want to trace all the calls but in module
+b.cc you defined LOGGING_WITH_CEDARDUMP yourself because you want to trace the CedarArray overloaded operator in the
+function test(). If you compile a.cc and b.cc then run a test, you will get a run time error like "Bus error (core dumped)". The reason
+why this error is easy to detect in this trivial program. In module a.cc LOGGING_WITH_CEDARDUMP is NOT DEFINED so the
+fast performance constructor for an CedarArray of integers is being instantiated for the global variable t and the object t to be
+created with this constructor at running time DOES NOT HAVE a pdumper member as defined in class declaration in
+"CedarArray.h"! . In the other hand because of the #define in the first line the module b.cc you are overriding the definition in
+CedarAPIVersion.h and therefore t has the instantiated LOGGING_WITH_CEDARDUMP version of the overloaded operator [ ]
+and this functions WILL CALL the data member pdumper. Then, after compiled time the linker comes an mix a.o with b.o to create
+an hybrid object "CedarArray of Integers" because is unaware that a portion of the object needs a pdumper member an the other
+portion does not create it. This will cause the mentioned run-time error. To avoid this do not add #define
+LOGGING_WITH_CEDARDUMP in the module b.cc and recompile. Voila, the error is gone. What we try to illustrate here is that
+you may mix different versions in different modules if you are not careful, the rule of thumb is DO NOT USE your own #define
+LOGGING_WITH_CEDARDUMP but rather include the master header CedarAPIVersion.h. To trace only portions of code call the
+CedarDump::suspend as soon! your CedarDump object is created to suspend tracing and add!
+CedarDump::resume-CedarDump::suspend around the portions of code you want to trace. Note: The compiled library for the API
+itself does not have that problem because all the header files include the master header CedarAPIVersion.h 
+ 
+
+Link \Ref{CedarArray}
+
+@memo	An introduction to the C++ API for the CEDAR database.
+@version	1.2
+@author	Jose Humberto Garcia
+
+*/

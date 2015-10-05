@@ -1,0 +1,356 @@
+# Nu=uncorrected electron density (Ne) from fine ht resolution power profiles.  
+# ACFs produce Ne, Te and Ti (Tr=Te/Ti) in long and short pulse lengths.        
+# The longer pulse lengths cover more altitude, and are better in the F region. 
+# Ni=ion density, which is either assumed or calculated from ACFs.              
+# CF=ACFs in EISCAT records (huge); use kindat+1000 for records w/o ACFs < 1994.
+# Nn=any kind of neutral density except for Na (sodium) and Fe (iron).          
+# Tn,Vn=neutral temperature and winds.                                          
+# Vi=ion winds, related to electric fields (Ef), and electric potential (Ep),   
+#  and electric current density (Je) and Joule heating (Qj).                    
+# Sg=sigma or conductances and particle heating (Qp) are related to Ne          
+#                                                                               
+10/1040 Vi                                                      
+10/1050 Vi                                                      
+10/1051 Vi                                                      
+10/1101 Nu Ne old Faraday rot data 1966-1969                    
+10/1800 Nu Ne Ni Te Ti new Faraday rot data > 1995              
+10/1900 Vi 5mn aves as func(alt) > 3/95                         
+10/1901 Vi 4 ht avs of kindat 1900 > 3/95                       
+10/4000 Vi                                                      
+10/30003 Ne Te Ti                                               
+20/2001 Nu Ne Ni Ti Tr Vi                                       
+20/2002 Ne Ni Ti Tr Vi                                          
+20/2010 Ne Ni Te Ti Vi                                          
+20/2011 Vi                                                      
+20/2015 Ne                                                      
+20/2021 Vn LTCS                                                 
+20/12999 Ti Vn tides LTCS                                       
+20/15100 Te Ti Tn Vi Vn                                         
+20/30001 Ni Te Ti Vi Ef                                         
+20/30002 Ne                                                     
+20/30005 Nu                                                     
+20/30008 Ne Ni Te Ti                                            
+20/30009 Ne Te Ti Tr Vi                                         
+20/30014 Nu                                                     
+20/30015 Nu Ne Te Ti Tr Vi                                      
+20/30016 Nu Ne                                                  
+25/17000 Vi                                                     
+30/3302 Nu Ne Te Ti Tr Vi                                       
+30/3304 Nu Ne Ni Te Ti Tr Vi                                    
+30/13021 Vn tides LTCS                                          
+30/13211 Vi Vn LTCS E region                                    
+30/13212 Vi Vn Ef LTCS F region                                 
+30/15100 Ni Nn Te Ti Tn Vi Vn                                   
+31/3001 Nu Ne Te Ti Tr Vi                                       
+31/3071 Nu Ne Ni Te Ti Tr Vi                                    
+31/3301 Nu Ne Te Ti Tr Vi                                       
+31/3302 Nu Ne Ni Te Ti Tr Vi                                    
+31/3303 Nu Ne Ni Te Ti Tr Vi                                    
+31/3304 Nu Ne Ni Te Ti Tr Vi                                    
+31/3408 Nu Ni Ti Tr Vi                                          
+31/13001 Vi Ef                                                  
+31/13002 Vi Ef                                                  
+31/15100 Ni Nn Te Ti Tn Vi Vn                                   
+32/3001 Nu Ne Te Ti Tr Vi                                       
+32/3071 Nu Ne Ni Te Ti Tr Vi                                    
+32/3301 Nu Ne Te Ti Tr Vi                                       
+32/3302 Nu Ne Ni Te Ti Tr Vi                                    
+32/3303 Nu Ne Ni Te Ti Tr Vi                                    
+32/3304 Nu Ne Ni Te Ti Tr Vi                                    
+32/3408 Nu Ni Ti Tr Vi                                          
+32/13022 Ti tides LTCS                                          
+32/15100 Ni Nn Te Ti Tn Vi Vn                                   
+40/4201 Ne Te Ti Vi                                             
+40/4202 Ne Te Ti Vi                                             
+40/4203 Ne Te Ti Vi                                             
+40/4204 Ne Te Ti Vi                                             
+40/4205 Ne Ni Te Ti Vi                                          
+41/4205 Ne Ni Te Ti Vi                                          
+41/4206 Ne Te Ti Vi                                             
+41/4207 Ne Te Ti Vi                                             
+41/30004 Tn                                                     
+42/30004 Tn                                                     
+43/30004 Tn                                                     
+50/5100 Ne                                                      
+50/5101 Ne                                                      
+50/5102 Ne                                                      
+50/5103 Ne Tn Sg                                                
+50/5121 Ne Ni Te Ti Tr Tn Vi                                    
+50/5124 Te Ti                                                   
+50/15013 Ne Ni Te Ti Vi Ef                                      
+50/15014 Ne Ni Te Ti Vi pre-LTCS                                
+50/15021 Vi Ef Je Qj Qp Sg                                      
+50/15051 Ef Je Qj Sg                                            
+50/15115 Nn Tn Vi Vn Ef pre-LTCS                                
+70/6118 Vi                                                      
+70/6120 Vi                                                      
+70/6122 Vi                                                      
+70/6208 Vi                                                      
+70/6210 Vi                                                      
+70/6312 Vi                                                      
+70/6314 Vi                                                      
+71/6112 Nu Ne Ni Te Ti Vi CF                                    
+71/6116 Nu Ne Ni Te Ti Vi CF                                    
+71/6118 Nu Ne Ni Te Ti Vi CF                                    
+71/6120 Nu Ne Ni Te Ti Vi CF                                    
+71/6122 Nu Ne Ni Te Ti Vi CF                                    
+71/6206 Nu Ne Ni Te Ti Vi CF                                    
+71/6208 Nu Ne Ni Te Ti Vi CF                                    
+71/6210 Nu Ne Ni Te Ti Vi CF                                    
+71/6306 Nu Ne Ni Te Ti Vi CF                                    
+71/6310 Nu Ne Ni Te Ti Vi CF                                    
+71/6312 Nu Ne Ni Te Ti Vi CF                                    
+71/6314 Nu Ne Ni Te Ti Vi CF                                    
+71/6402 Nu Ne Ni Te Ti Vi CF                                    
+71/6502 Nu Ne Ni Te Ti Vi CF                                    
+71/7000 Nu Ne Ni Te Ti Vi CF                                    
+71/7112 Nu Ne Ni Te Ti Vi                                       
+71/7116 Nu Ne Ni Te Ti Vi                                       
+71/7118 Nu Ne Ni Te Ti Vi                                       
+71/7120 Nu Ne Ni Te Ti Vi                                       
+71/7122 Nu Ne Ni Te Ti Vi                                       
+71/7206 Nu Ne Ni Te Ti Vi                                       
+71/7208 Nu Ne Ni Te Ti Vi                                       
+71/7210 Nu Ne Ni Te Ti Vi                                       
+71/7306 Nu Ne Ni Te Ti Vi                                       
+71/7310 Nu Ne Ni Te Ti Vi                                       
+71/7312 Nu Ne Ni Te Ti Vi                                       
+71/7314 Nu Ne Ni Te Ti Vi                                       
+71/7402 Nu Ne Ni Te Ti Vi                                       
+71/7502 Nu Ne Ni Te Ti Vi                                       
+72/6111 Nu                                                      
+72/6112 Nu Ne Ni Te Ti Vi CF                                    
+72/6115 Nu                                                      
+72/6116 Nu Ne Ni Te Ti Vi CF                                    
+72/6117 Nu                                                      
+72/6118 Nu Ne Ni Te Ti Vi CF                                    
+72/6119 Nu                                                      
+72/6120 Nu Ne Ni Te Ti Vi CF                                    
+72/6121 Nu                                                      
+72/6122 Nu Ne Ni Te Ti Vi CF                                    
+72/6205 Nu                                                      
+72/6206 Nu Ne Ni Te Ti Vi CF                                    
+72/6207 Nu                                                      
+72/6208 Nu Ne Ni Te Ti Vi CF                                    
+72/6209 Nu                                                      
+72/6210 Nu Ne Ni Te Ti Vi CF                                    
+72/6305 Nu                                                      
+72/6306 Nu Ne Ni Te Ti Vi CF                                    
+72/6309 Nu                                                      
+72/6310 Nu Ne Ni Te Ti Vi CF                                    
+72/6311 Nu                                                      
+72/6312 Nu Ne Ni Te Ti Vi CF                                    
+72/6313 Nu                                                      
+72/6314 Nu Ne Ni Te Ti Vi CF                                    
+72/6402 Nu Ne Ni Te Ti Vi CF                                    
+72/6501 Nu                                                      
+72/6502 Nu Ne Ni Te Ti Vi CF                                    
+72/6714 Nu Ne Ni Te Ti Vi CF                                    
+72/6999 Nu                                                      
+72/7000 Nu Ne Ni Te Ti Vi CF                                    
+72/7112 Nu Ne Ni Te Ti Vi                                       
+72/7116 Nu Ne Ni Te Ti Vi                                       
+72/7118 Nu Ne Ni Te Ti Vi                                       
+72/7120 Nu Ne Ni Te Ti Vi                                       
+72/7122 Nu Ne Ni Te Ti Vi                                       
+72/7206 Nu Ne Ni Te Ti Vi                                       
+72/7208 Nu Ne Ni Te Ti Vi                                       
+72/7210 Nu Ne Ni Te Ti Vi                                       
+72/7306 Nu Ne Ni Te Ti Vi                                       
+72/7310 Nu Ne Ni Te Ti Vi                                       
+72/7312 Nu Ne Ni Te Ti Vi                                       
+72/7314 Nu Ne Ni Te Ti Vi                                       
+72/7402 Nu Ne Ni Te Ti Vi                                       
+72/7502 Nu Ne Ni Te Ti Vi                                       
+72/8000 Nu Ne Ni Te Ti Vi                                       
+73/6112 Nu Ne Ni Te Ti Vi CF                                    
+73/6116 Nu Ne Ni Te Ti Vi CF                                    
+73/6118 Nu Ne Ni Te Ti Vi CF                                    
+73/6120 Nu Ne Ni Te Ti Vi CF                                    
+73/6122 Nu Ne Ni Te Ti Vi CF                                    
+73/6206 Nu Ne Ni Te Ti Vi CF                                    
+73/6208 Nu Ne Ni Te Ti Vi CF                                    
+73/6210 Nu Ne Ni Te Ti Vi CF                                    
+73/6306 Nu Ne Ni Te Ti Vi CF                                    
+73/6310 Nu Ne Ni Te Ti Vi CF                                    
+73/6312 Nu Ne Ni Te Ti Vi CF                                    
+73/6314 Nu Ne Ni Te Ti Vi CF                                    
+73/6402 Nu Ne Ni Te Ti Vi CF                                    
+73/6502 Nu Ne Ni Te Ti Vi CF                                    
+73/7112 Nu Ne Ni Te Ti Vi                                       
+73/7116 Nu Ne Ni Te Ti Vi                                       
+73/7118 Nu Ne Ni Te Ti Vi                                       
+73/7120 Nu Ne Ni Te Ti Vi                                       
+73/7122 Nu Ne Ni Te Ti Vi                                       
+73/7206 Nu Ne Ni Te Ti Vi                                       
+73/7208 Nu Ne Ni Te Ti Vi                                       
+73/7210 Nu Ne Ni Te Ti Vi                                       
+73/7306 Nu Ne Ni Te Ti Vi                                       
+73/7310 Nu Ne Ni Te Ti Vi                                       
+73/7312 Nu Ne Ni Te Ti Vi                                       
+73/7314 Nu Ne Ni Te Ti Vi                                       
+73/7402 Nu Ne Ni Te Ti Vi                                       
+73/7502 Nu Ne Ni Te Ti Vi                                       
+74/6404 Nu Ne Ni Te Ti Vi CF                                    
+74/6604 Nu Ne Ni Te Ti Vi CF                                    
+74/6709 Nu                                                      
+74/6710 Nu Ne Ni Te Ti Vi CF                                    
+74/6711 Nu                                                      
+74/6712 Nu Ne Ni Te Ti Vi CF                                    
+74/6714 Nu Ne Ni Te Ti Vi CF                                    
+74/7000 Nu Ne Ni Te Ti Vi CF                                    
+74/7404 Nu Ne Ni Te Ti Vi                                       
+74/7604 Nu Ne Ni Te Ti Vi                                       
+74/7710 Nu Ne Ni Te Ti Vi                                       
+80/5100 Ne                                                      
+80/5102 Ne Sg                                                   
+80/5103 Ne Tn Qj Sg                                             
+80/5121 Ne Ni Te Ti Tr Tn Vi                                    
+80/5124 Te Ti                                                   
+80/5150 Ne                                                      
+80/5152 Ne                                                      
+80/5171 Ne Ni Te Ti Tr Tn Vi                                    
+80/5174 Te Ti                                                   
+80/5501 Nu Ne Ni Te Ti Vi                                       
+80/5502 Nu Ne Ni Te Ti Vi                                       
+80/5503 Nu Ne Ni Te Ti Vi                                       
+80/5505 Nu Ne Ni Te Ti Vi                                       
+80/5506 Nu Ne Ni Te Ti Vi                                       
+80/5521 Nu Ne Ni Te Ti Vi                                       
+80/9001 Nu                                                      
+80/9002 Nu                                                      
+80/9003 Nu                                                      
+80/9005 Nu                                                      
+80/9006 Nu                                                      
+80/15011 Vi Ef                                                  
+80/15013 Ne Ni Te Ti Vi Ef LTCS F region                        
+80/15014 Ne Ni Te Ti Vi LTCS                                    
+80/15021 Vi Ef Je Qj Qp Sg                                      
+80/15022 Vi Ef Je Qj                                            
+80/15023 Vi Ef Je Qj Qp Sg                                      
+80/15100 Te Ti Tn Vi Vn                                         
+80/15115 Ne Nn Te Ti Tn Vi Vn Ef Qj                             
+80/15413 Ne Te Ti Vi Ef LTCS E+F region                         
+80/15414 Ne Te Ti Vi LTCS                                       
+80/15520 Vi                                                     
+80/15525 Ne Te Ti                                               
+80/15610 Vi Ef                                                  
+80/15620 Ef Je Sg                                               
+80/15621 Ef Je Sg                                               
+80/15630 Vi Ef                                                  
+80/15999 Ti Vn tides LTCS                                       
+80/19120 Vi Ef Je Sg                                            
+95/6001 Ne Ti Tr Vi                                             
+120/30012 sat hourly IMF and plasma param                       
+120/30021 sat 1m av IMF (83-88, World Days)                     
+175/31011 NOAA sat auroral hemispheric power in GW              
+175/31012 DMSP sat auroral hemispheric power in GW              
+180/17001 DMSP sat auroral midnight equatorward boundary        
+210/30007 Kp, ap, Ap, F10.7 solar flux (daily,3 cycles)         
+211/30008 AE (AU,AL,AO) gnd magnetic index (1m,hrly)            
+212/30006 Dst hourly gnd magnetic index in nT                   
+220/17001 PCI Vostok 1 min polar cap index                      
+220/17015 PCI Vostok 15 min polar cap index                     
+220/17060 PCI Vostok 60 min polar cap index                     
+310/10034 Ne Ni Nn Te Ti Tn Vn Ep Qp          1979              
+310/11031 Tn Vn Ep 30kV                                         
+310/11032 Tn Vn Ep tides 30kV                                   
+310/11061 Tn Vn Ep 60kV                                         
+310/11062 Tn Vn Ep tides 60kV                                   
+310/11091 Tn Vn Ep 90kV                                         
+310/11092 Tn Vn Ep tides 90kV                                   
+311/30010 Ef Ep Sg NH 18-19 Jan 1984                            
+311/30011 Ef Ep Qj Qp Sg old NH 23-26 Sep 1986                  
+311/30018 Ef Ep Qj Qp Sg new NH 23-26 Sep 1986                  
+311/30019 Ep SH assumed 23-26 Sep 1986                          
+311/30020 Vi Ep Qp SH,NH 23-26 Sep 1986 for TIGCM               
+311/30021 Ef Ep Qj Qp Sg NH for several AMIE campaigns          
+311/30022 Ef Ep Qj Qp Sg SH 20-21 Mar 1990                      
+320/20001 Tn Vn tides                                           
+321/20001 Tn Vn tides                                           
+322/20001 Tn Vn tides                                           
+820/7001 Vi                                                     
+825/7001 Vi                                                     
+830/7001 Vi                                                     
+831/7001 Vi                                                     
+845/7001 Vi                                                     
+861/7001 Vi                                                     
+870/7001 Vi                                                     
+900/7001 Vi                                                     
+910/7001 Vi                                                     
+911/7001 Vi                                                     
+1040/2002 Vn                                                    
+1140/20001 Vn hrly aves, east beam                              
+1140/20002 Vn hrly aves, north beam                             
+1140/20003 Vn hrly aves, vertical beam                          
+1140/20004 Vn hrly aves, combined E/N winds                     
+1210/17999 Vn tides LTCS period analysis                        
+1220/17001 Vn tides mean winds, normal anal                     
+1220/17999 Vn tides LTCS period analysis                        
+1230/17999 Vn tides LTCS period analysis                        
+1240/17999 Vn tides LTCS period analysis                        
+1320/17001 Vn tides mean and semi-diurnal (sd)                  
+1320/17002 Vn tides hourly winds                                
+1320/17003 Vn tides d/sd func(altitude)                         
+1320/17011 Vn tides mean and sd f(v alt) > 5/98                 
+1320/17012 Vn hourly winds > 5/98                               
+1320/17013 Vn tides d/sd func(altitude) > 5/98                  
+1320/17999 Vn tides LTCS period analysis                        
+1340/17999 Vn tides LTCS period analysis                        
+1390/17999 Vn tides LTCS period analysis                        
+1560/17001 Vn tides                                             
+1560/17002 Vn                                                   
+1620/17001 Vn tides monthly climatology (78-82)                 
+1620/17011 Vn tides Groves coefs, normal anal                   
+1620/17021 Vn tides normal analysis                             
+1620/17999 Vn tides LTCS period analysis                        
+2090/17001 Vn tides normal analysis                             
+2090/17999 Vn tides LTCS period analysis                        
+2200/17999 Vn tides LTCS period analysis                        
+2890/17002 Vi                                                   
+2930/17001 Vi older, mean alt 300 km, 1989                      
+2930/17002 Vi newer, mean alt 250 km, 1993                      
+3320/17004 Tn nightly averages                                  
+4470/17001 Qp optical obs/calcs and Strickland model inputs
+4470/18001 Nn Tn Strickland transport model inputs
+5000/17111 Tn Vn Red line (~240 km), multi-directions
+5020/17001 Vn 1988-1993 cubic spline fits                       
+5020/17002 Vn 1994-1998 cubic spline fits                       
+5060/17001 Tn Vn Red line (~240 km), cardinal dirs              
+5060/17002 Tn Vn Green line (~96 km, or higher w aurora), EWNS  
+5060/17004 Tn Vn [OH] line (~89 km, cardinal dirs               
+5140/17001 Vn monthly quiet-time averages                       
+5140/17002 Tn Vn                                                
+5160/17001 Vn older submissions                                 
+5160/17010 Vn combined meas in zero vel ref                     
+5160/17011 Vn vertical meas in zero vel ref                     
+5160/17020 Vn                                                   
+5300/7002 Tn Vn                                                 
+5300/7003 Tn Vn                                                 
+5340/7001 Tn Vn vertical meas in zero vel ref                   
+5340/7002 Tn Vn combined meas in zero vel ref                   
+5340/17001 Vn derived data from kindat 7001                     
+5340/17002 Vn derived data from kindat 7002                     
+5430/7001 Tn Vn                                                 
+5460/17001 Tn Vn                                                
+5480/7001 Tn Vn (some Vn only line-of-sight)                    
+5480/20001 Tn Vn                                                
+5540/7001 Tn Vn                                                 
+5860/17001 Tn                                                   
+6300/7001 Nn ave 23s, 37.5m                                     
+6300/7002 Na ave 23s, 37.5m                                     
+6300/7003 Fe ave 23s, 37.5m                                     
+6300/17001 Nn ave 15mn, 525m                                    
+6300/17002 Na ave 15mn, 525m                                    
+6300/17003 Fe ave 15mn, 525m                                    
+6300/17101 Na Tn Vn                                             
+6300/17102 Na Tn Vn weekly 8-wk Hamming mean days               
+6300/17103 Na Tn Vn monthly 8-wk Hamming mean days              
+6320/17001 Na Tn hourly means                                   
+6320/17002 Na Tn nightly means                                  
+6320/17003 Na Tn monthly means                                  
+6320/17087 Tn nightly means 87+/-1.85 km                        
+6320/17100 Na Tn climatology aves (1990-1999)                   
+6330/17001 Nn Tn nightly means                                  
+6330/17002 Nn Tn hourly means                                   
+7191/17001 Tn nightly averages                                  

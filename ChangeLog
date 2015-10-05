@@ -1,0 +1,646 @@
+2012-02-27  Patrick West <pwest@ucar.edu>
+
+	Updating library version for new release. Have not done this in quite a
+	while. In fact, have not paid attention to it.
+	M    configure.ac
+
+2012-02-27  Patrick West <pwest@ucar.edu>
+
+	Built on Ubuntu with newer compiler. Fixed some problems with const
+	char * conversions. #ifdef X || Y now is written
+	#if defined(X) || defined(Y). added cstdlib, cstdio, and cstring
+	where needed.
+	M    configure.ac
+	M    library/CedarDump.cc
+	M    library/CedarString.h
+	M    library/CedarParameter.cc
+	M    library/CedarDate.cc
+	M    library/CedarMadrigalFormat.cc
+	M    library/CedarConstraintEvaluator.cc
+	M    library/CedarCrayBlockingFormat.cc
+
+2012-02-27  Patrick West <pwest@ucar.edu>
+
+	ChangeLog for 2.2.2 release
+	M    ChangeLog
+
+2012-02-27  Patrick West <pwest@ucar.edu>
+
+	Updated -k option to display kinst/kindat/jpar/mpar groups
+	M    library/cedardumper.cc
+	M    NEWS
+
+2011-06-30  Patrick West <pwest@ucar.edu>
+
+	Added -k option to dumper to display kinst-kindat pairs in a file.
+	Cleaned up some more methods.
+	M    configure.ac
+	M    library/cedardumper.cc
+	M    library/CedarLogicalRecord.h
+	M    library/CedarFile.cc
+	M    NEWS
+
+2011-05-02  Patrick West <pwest@ucar.edu>
+
+	Missed deleting a debug line
+	M    library/CedarFile.cc
+
+2011-05-02  Patrick West <pwest@ucar.edu>
+
+	More better debugging, change to getting version
+	M    library/CedarDump.cc
+	M    library/CedarErrors.h
+	M    library/CedarFile.cc
+	M    library/CedarMadrigalFormat.cc
+	M    library/CedarDump.h
+	M    library/CedarMessages.h
+
+2010-06-05  Patrick West <pwest@ucar.edu>
+
+	ChangeLog updated for 2.2.1 release
+	M    ChangeLog
+
+2010-06-05  Patrick West <pwest@ucar.edu>
+
+	Minor updates, bug fixes, up to date with libdap 3.10.x and bes 3.8.x
+	_M   unit-tests/exceptT.cc
+	_M   unit-tests/strConvertT.cc
+	_M   unit-tests/TEST_CedarFileMultiThread.cc
+	MM   unit-tests/arrayT.cc
+	_M   unit-tests/TEST_CedarConstraintEvaluator.cc
+	MM   unit-tests/errHandlerT.cc
+	_M   AUTHORS
+	D    conf/mkinstalldirs
+	D    conf/depcomp
+	D    conf/missing
+	D    conf/config.guess
+	D    conf/config.sub
+	D    conf/ltmain.sh
+	D    conf/install-sh
+	MM   ChangeLog
+	_M   benchmarks.txt
+	_M   README
+	M    configure.ac
+	_M   library/CedarArray_CedarParameter_tpl.cc
+	_M   library/CedarArray_CedarRecordType_tpl.cc
+	_M   library/CedarException.cc
+	_M   library/CedarValidDate.h
+	_M   library/CedarDump.cc
+	_M   library/CedarString.h
+	_M   library/CedarConstraintEvaluator.h
+	_M   library/CedarCursor.cc
+	_M   library/CedarRecordType.cc
+	_M   library/CedarArray_byte_tpl.cc
+	_M   library/CedarRecordType.h
+	_M   library/CedarHeaderRecord.cc
+	MM   library/CedarBlock.h
+	MM   library/cedardumper.cc
+	_M   library/CedarValidDate.cc
+	_M   library/CedarArray_field_tpl.cc
+	_M   library/CedarDataTypes.h
+	_M   library/CedarCrayServices.h
+	_M   library/CedarArray_CedarBlock_tpl.cc
+	_M   library/CedarArray_int_tpl.cc
+	_M   library/CedarCatalogRecord.h
+	_M   library/CedarLogicalRecord.h
+	_M   library/CedarArray.cc
+	_M   library/CedarDate.h
+	MM   library/nrecords.cc
+	_M   library/CedarParameter.cc
+	_M   library/CedarArray_CedarString_tpl.cc
+	_M   library/CedarParameter.h
+	MM   library/CedarErrorHandler.cc
+	_M   library/CedarHeaderRecord.h
+	_M   library/CedarMadrigalFormat.h
+	_M   library/CedarGroup.cc
+	_M   library/CedarGroup.h
+	_M   library/CedarStringConversions.cc
+	_M   library/CedarException.h
+	_M   library/CedarString.cc
+	_M   library/CedarCatalogRecord.cc
+	_M   library/CedarLogicalRecord.cc
+	_M   library/CedarDate.cc
+	_M   library/CedarErrors.h
+	_M   library/CedarPhysicalFile.h
+	_M   library/CedarFile.cc
+	_M   library/CedarLogicalRecordBuilder.cc
+	_M   library/CedarLogicalRecordBuilder.h
+	MM   library/CedarVersion.h
+	_M   library/CedarMadrigalFormat.cc
+	MM   library/CedarErrorHandler.h
+	_M   library/CedarBlock.cc
+	_M   library/CedarStringConversions.h
+	_M   library/CedarCrayServices.cc
+	_M   library/CedarDump.h
+	_M   library/CedarConstraintEvaluator.cc
+	_M   library/CedarDataRecord.cc
+	_M   library/CedarMessages.h
+	_M   library/CedarDataRecord.h
+	_M   library/CedarCrayBlockingStructures.h
+	_M   library/CedarCursor.h
+	_M   library/CedarArray.h
+	_M   library/CedarCrayBlockingFormat.cc
+	_M   library/CedarFile.h
+	_M   library/CedarCrayBlockingFormat.h
+	MM   library/CedarVersion.cc
+	_M   library/CedarArray_char_tpl.cc
+	_M   INSTALL
+	_M   COPYING
+	MM   NEWS
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
+2010-06-05  Patrick West <pwest@ucar.edu>
+
+	Minor updates, bug fixes, up to date with libdap 3.10.x and bes
+	3.8.x
+	_M   unit-tests/exceptT.cc
+	_M   unit-tests/strConvertT.cc
+	_M   unit-tests/TEST_CedarFileMultiThread.cc
+	MM   unit-tests/arrayT.cc
+	_M   unit-tests/TEST_CedarConstraintEvaluator.cc
+	MM   unit-tests/errHandlerT.cc
+	_M   AUTHORS
+	D    conf/mkinstalldirs
+	D    conf/depcomp
+	D    conf/missing
+	D    conf/config.guess
+	D    conf/config.sub
+	D    conf/ltmain.sh
+	D    conf/install-sh
+	MM   ChangeLog
+	_M   benchmarks.txt
+	_M   README
+	M    configure.ac
+	_M   library/CedarArray_CedarParameter_tpl.cc
+	_M   library/CedarArray_CedarRecordType_tpl.cc
+	_M   library/CedarException.cc
+	_M   library/CedarValidDate.h
+	_M   library/CedarDump.cc
+	_M   library/CedarString.h
+	_M   library/CedarConstraintEvaluator.h
+	_M   library/CedarCursor.cc
+	_M   library/CedarRecordType.cc
+	_M   library/CedarArray_byte_tpl.cc
+	_M   library/CedarRecordType.h
+	_M   library/CedarHeaderRecord.cc
+	MM   library/CedarBlock.h
+	MM   library/cedardumper.cc
+	_M   library/CedarValidDate.cc
+	_M   library/CedarArray_field_tpl.cc
+	_M   library/CedarDataTypes.h
+	_M   library/CedarCrayServices.h
+	_M   library/CedarArray_CedarBlock_tpl.cc
+	_M   library/CedarArray_int_tpl.cc
+	_M   library/CedarCatalogRecord.h
+	_M   library/CedarLogicalRecord.h
+	_M   library/CedarArray.cc
+	_M   library/CedarDate.h
+	MM   library/nrecords.cc
+	_M   library/CedarParameter.cc
+	_M   library/CedarArray_CedarString_tpl.cc
+	_M   library/CedarParameter.h
+	MM   library/CedarErrorHandler.cc
+	_M   library/CedarHeaderRecord.h
+	_M   library/CedarMadrigalFormat.h
+	_M   library/CedarGroup.cc
+	_M   library/CedarGroup.h
+	_M   library/CedarStringConversions.cc
+	_M   library/CedarException.h
+	_M   library/CedarString.cc
+	_M   library/CedarCatalogRecord.cc
+	_M   library/CedarLogicalRecord.cc
+	_M   library/CedarDate.cc
+	_M   library/CedarErrors.h
+	_M   library/CedarPhysicalFile.h
+	_M   library/CedarFile.cc
+	_M   library/CedarLogicalRecordBuilder.cc
+	_M   library/CedarLogicalRecordBuilder.h
+	MM   library/CedarVersion.h
+	_M   library/CedarMadrigalFormat.cc
+	MM   library/CedarErrorHandler.h
+	_M   library/CedarBlock.cc
+	_M   library/CedarStringConversions.h
+	_M   library/CedarCrayServices.cc
+	_M   library/CedarDump.h
+	_M   library/CedarConstraintEvaluator.cc
+	_M   library/CedarDataRecord.cc
+	_M   library/CedarMessages.h
+	_M   library/CedarDataRecord.h
+	_M   library/CedarCrayBlockingStructures.h
+	_M   library/CedarCursor.h
+	_M   library/CedarArray.h
+	_M   library/CedarCrayBlockingFormat.cc
+	_M   library/CedarFile.h
+	_M   library/CedarCrayBlockingFormat.h
+	MM   library/CedarVersion.cc
+	_M   library/CedarArray_char_tpl.cc
+	_M   INSTALL
+	_M   COPYING
+	MM   NEWS
+
+2008-04-19  Patrick West <pwest@ucar.edu>
+
+	2.1.1 distribution. Source tar ball built.
+	M    ChangeLog
+	A    testsuite/config/unix.exp.in
+	D    testsuite/config/unix.exp
+	D    testsuite/common_tests.exp
+	M    testsuite/Makefile.am
+	A    testsuite/common_tests.exp.in
+	M    configure.ac
+	M    library/Makefile.am
+	M    Makefile.am
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
+2008-04-17  Patrick West <pwest@ucar.edu>
+
+	Data directory moved to testsuite and baseline files created there
+	as well.
+	D    data
+
+2008-04-17  Patrick West <pwest@ucar.edu>
+
+	Updated the README and INSTALL for information about this library
+	and information about how to build, test and install the library.
+
+	Added copyright comments at the top of each .h and .cc file
+
+	Added a cedar-config script to be used by packages wanting to use
+	this library.
+
+	Changed the name of this package from cedar to Cedar++.
+
+	Updated the COPYING and added a COPYRIGHT_UCAR file for copyright
+	information.
+
+	Changed the --enable-exceptions to create a definition in the
+	CedarConfig.h file instead of doing a conditional make -D option.
+
+	Added a --enable-cedardebug=[1|2] to the configure.ac file which
+	defines whether debugging is set to level 1 or 2, 2 providing more
+	debug inforamtion. Added the inlude of CedarConfig to the top of
+	each .cc file and any .h files that needed it.
+
+	Converted to the C++ c includes (e.g. #include <cstdio>)
+
+	Wherever unistd.h was included wrapped it with #ifdef HAVE_UNISTD_H
+	macro test.
+	M    unit-tests/exceptT.cc
+	M    unit-tests/strConvertT.cc
+	M    unit-tests/TEST_CedarFileMultiThread.cc
+	M    unit-tests/arrayT.cc
+	M    unit-tests/TEST_CedarConstraintEvaluator.cc
+	M    unit-tests/Makefile.am
+	M    unit-tests/errHandlerT.cc
+	A    COPYRIGHT_UCAR
+	A    cedar-config.in
+	M    README
+	M    configure.ac
+	M    library/CedarArray_CedarParameter_tpl.cc
+	M    library/CedarArray_CedarRecordType_tpl.cc
+	M    library/CedarException.cc
+	M    library/CedarValidDate.h
+	M    library/CedarDump.cc
+	M    library/CedarString.h
+	M    library/CedarConstraintEvaluator.h
+	M    library/CedarCursor.cc
+	M    library/CedarArray_byte_tpl.cc
+	M    library/CedarRecordType.cc
+	M    library/CedarRecordType.h
+	M    library/CedarHeaderRecord.cc
+	M    library/CedarBlock.h
+	M    library/cedardumper.cc
+	M    library/CedarValidDate.cc
+	M    library/CedarArray_field_tpl.cc
+	M    library/CedarDataTypes.h
+	M    library/CedarCrayServices.h
+	M    library/CedarArray_CedarBlock_tpl.cc
+	M    library/CedarArray_int_tpl.cc
+	M    library/CedarLogicalRecord.h
+	M    library/CedarCatalogRecord.h
+	M    library/CedarArray.cc
+	M    library/CedarDate.h
+	M    library/nrecords.cc
+	M    library/CedarParameter.cc
+	M    library/CedarArray_CedarString_tpl.cc
+	M    library/CedarParameter.h
+	M    library/CedarErrorHandler.cc
+	M    library/CedarHeaderRecord.h
+	M    library/CedarMadrigalFormat.h
+	M    library/CedarGroup.cc
+	M    library/CedarGroup.h
+	M    library/CedarStringConversions.cc
+	M    library/CedarException.h
+	M    library/CedarString.cc
+	M    library/CedarCatalogRecord.cc
+	M    library/CedarLogicalRecord.cc
+	M    library/CedarDate.cc
+	M    library/CedarErrors.h
+	M    library/CedarPhysicalFile.h
+	M    library/CedarFile.cc
+	M    library/CedarLogicalRecordBuilder.cc
+	M    library/CedarLogicalRecordBuilder.h
+	M    library/CedarVersion.h
+	M    library/CedarErrorHandler.h
+	M    library/CedarMadrigalFormat.cc
+	M    library/CedarBlock.cc
+	M    library/CedarStringConversions.h
+	M    library/CedarCrayServices.cc
+	M    library/CedarConstraintEvaluator.cc
+	M    library/CedarDump.h
+	M    library/CedarDataRecord.cc
+	M    library/CedarMessages.h
+	M    library/CedarDataRecord.h
+	M    library/CedarCrayBlockingStructures.h
+	M    library/CedarCursor.h
+	M    library/CedarArray.h
+	M    library/CedarCrayBlockingFormat.cc
+	M    library/CedarFile.h
+	M    library/CedarCrayBlockingFormat.h
+	M    library/CedarVersion.cc
+	M    library/Makefile.am
+	M    library/CedarArray_char_tpl.cc
+	M    INSTALL
+	M    COPYING
+	M    Makefile.am
+
+2008-04-17  Patrick West <pwest@ucar.edu>
+
+	Updated unit tests and added testsuite to handle tests described in original
+	README.
+	D    unit-tests/TEST_CedarArray.cc
+	A    unit-tests/arrayT.cc
+	D    unit-tests/TEST_CedarErrorHandler.cc
+	M    unit-tests/Makefile.am
+	A    unit-tests/errHandlerT.cc
+	A    testsuite
+	A    testsuite/common_tests.exp
+	A    testsuite/config
+	A    testsuite/config/unix.exp
+	A    testsuite/Makefile.am
+	A    testsuite/data
+	AM   testsuite/data/adf870831a.cbf
+	AM   testsuite/data/mfp890505a.cbf
+	AM   testsuite/data/cht811025a.cbf
+	AM   testsuite/data/dum870921a.cbf
+	AM   testsuite/data/wfp911129a.cbf
+	AM   testsuite/data/jro840626a.cbf
+	AM   testsuite/data/trf881125a.cbf
+	A    testsuite/cedar.0
+	A    testsuite/cedar.0/cedar_nrecords07.exp
+	A    testsuite/cedar.0/cedar_cedardump02.exp
+	A    testsuite/cedar.0/cedar_nrecords01.exp
+	A    testsuite/cedar.0/cedar_nrecords02.exp
+	A    testsuite/cedar.0/cedar_nrecords03.exp
+	A    testsuite/cedar.0/cedar_nrecords04.exp
+	A    testsuite/cedar.0/cedar_nrecords05.exp
+	A    testsuite/cedar.0/cedar_nrecords06.exp
+	A    testsuite/cedar.0/cedar_cedardump01.exp
+	A    testsuite/cedar
+	A    testsuite/cedar/nrecords01.baseline
+	A    testsuite/cedar/nrecords02.baseline
+	A    testsuite/cedar/nrecords03.baseline
+	A    testsuite/cedar/nrecords04.baseline
+	A    testsuite/cedar/nrecords05.baseline
+	A    testsuite/cedar/nrecords06.baseline
+	A    testsuite/cedar/cedardump01.baseline
+	A    testsuite/cedar/nrecords07.baseline
+	A    testsuite/cedar/cedardump02.baseline
+	M    configure.ac
+	M    library/CedarDump.cc
+	M    library/CedarArray.cc
+	M    library/CedarParameter.cc
+	M    library/CedarErrorHandler.cc
+	M    library/CedarString.cc
+	M    library/CedarErrors.h
+	M    library/CedarFile.cc
+	M    library/CedarLogicalRecordBuilder.cc
+	M    library/CedarMadrigalFormat.cc
+	M    library/CedarErrorHandler.h
+	M    library/CedarBlock.cc
+	M    library/CedarCrayServices.cc
+	M    library/CedarConstraintEvaluator.cc
+	M    library/CedarMessages.h
+	M    library/CedarCrayBlockingFormat.cc
+	M    library/CedarFile.h
+	M    library/Makefile.am
+	M    Makefile.am
+
+2008-04-16  Patrick West <pwest@ucar.edu>
+
+	moving testsuite to unit-tests so that testsuite can be used for regression
+	tests
+	A    unit-tests
+	A    unit-tests/exceptT.cc
+	D    unit-tests/TEST_CedarException.cc
+	A    unit-tests/strConvertT.cc
+	D    unit-tests/TEST_CedarStringConversions.cc
+	D    unit-tests/configure
+	D    unit-tests/Makefile.in
+	D    unit-tests/configure.in
+	D    unit-tests/CedarTest.h.in
+	A    unit-tests/Makefile.am
+	D    testsuite
+
+2008-04-16  Patrick West <pwest@ucar.edu>
+
+	added makefile
+	A    testsuite/Makefile.am
+
+2008-04-16  Patrick West <pwest@ucar.edu>
+
+	Preparing for first source release of the software. Undating testsuite tests
+	to run with make check.
+	M    configure.ac
+	A    conf/cppunit.m4
+	M    INSTALL
+	M    ChangeLog
+	D    testsuite/TEST_CedarException.cc
+	A    testsuite/exceptT.cc
+	D    testsuite/TEST_CedarStringConversions.cc
+	D    testsuite/configure
+	A    testsuite/strConvertT.cc
+	D    testsuite/Makefile.in
+	D    testsuite/configure.in
+	D    testsuite/CedarTest.h.in
+	M    NEWS
+	M    README
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
+2008-03-03  Patrick West <pwest@ucar.edu>
+
+	Parcods and Kinst reading is now done via the database and not from
+	generated header files from the ingest process. This code has been
+	moved to the OPeNDAP cedar_handler code.
+	D    library/checkKinst.cc
+	D    library/checkParcod.cc
+	D    library/CedarKinst.h
+	D    library/CedarParcods.h
+	D    library/CedarReadKinst.h
+	M    library/Makefile.am
+	D    library/CedarReadParcods.h
+
+2007-09-11  Patrick West <pwest@ucar.edu>
+
+	Include of unistd.h
+	M    library/CedarDump.cc
+	M    library/cedardumper.cc
+	M    library/nrecords.cc
+
+2007-09-11  Patrick West <pwest@ucar.edu>
+
+	stdarg.h required
+	M    library/CedarErrorHandler.cc
+
+2007-08-22  Patrick West <pwest@ucar.edu>
+
+	Changed to using C++ autoptr instead of AutoPtr class, requiring us
+	to use vector<type> rather than type[]. Rearranged includes and use
+	of CedarDump and CedarConfig so that header files were not including
+	CedarConfig, not requiring all classes to include everything from
+	CedarConfig (fstream, iostream, stdlib, stdio, etc...) and only
+	including what is needed.  Changed CedarDump to have a singleton
+	rather then classes creating their own instance. Moved the
+	CEDAR_DUMP macro checking to source files so don't need to include
+	CedarConfig in headers.
+	M    configure.ac
+	M    library/CedarException.cc
+	M    library/CedarValidDate.h
+	D    library/CedarVersionNumber.h
+	M    library/CedarDump.cc
+	M    library/CedarString.h
+	M    library/CedarConstraintEvaluator.h
+	M    library/CedarRecordType.h
+	M    library/CedarHeaderRecord.cc
+	M    library/CedarBlock.h
+	M    library/CedarDataTypes.h
+	M    library/CedarCrayServices.h
+	M    library/CedarLogicalRecord.h
+	M    library/CedarArray.cc
+	M    library/CedarDate.h
+	M    library/CedarHeaderRecord.h
+	M    library/CedarMadrigalFormat.h
+	M    library/CedarGroup.h
+	M    library/CedarStringConversions.cc
+	M    library/CedarException.h
+	M    library/CedarCatalogRecord.cc
+	M    library/CedarLogicalRecord.cc
+	M    library/CedarErrors.h
+	M    library/CedarFile.cc
+	M    library/CedarLogicalRecordBuilder.cc
+	M    library/CedarLogicalRecordBuilder.h
+	M    library/CedarVersion.h
+	M    library/CedarMadrigalFormat.cc
+	M    library/CedarErrorHandler.h
+	M    library/CedarBlock.cc
+	M    library/CedarStringConversions.h
+	M    library/CedarCrayServices.cc
+	M    library/CedarDump.h
+	M    library/CedarDataRecord.cc
+	M    library/CedarMessages.h
+	M    library/CedarDataRecord.h
+	M    library/CedarCrayBlockingStructures.h
+	M    library/CedarCursor.h
+	M    library/CedarArray.h
+	M    library/CedarCrayBlockingFormat.cc
+	M    library/CedarFile.h
+	M    library/CedarCrayBlockingFormat.h
+	M    library/CedarVersion.cc
+	M    library/Makefile.am
+
+2007-05-01  Patrick West <pwest@ucar.edu>
+
+	With changes to CedarConfig.h.in via configure.ac, don't need to
+	include fstream
+	M    library/CedarMessages.h
+
+2007-05-01  Patrick West <pwest@ucar.edu>
+
+	TEST_CEDARParcods was already in the library directory as
+	checkParcod. Moved TEST_CEDARKinst to library directory as
+	checkKinst.
+	A    library/checkKinst.cc
+	M    library/Makefile.am
+	D    testsuite/TEST_CEDARKinst.cc
+	D    testsuite/TEST_CEDARParcods.cc
+
+2007-05-01  Patrick West <pwest@ucar.edu>
+
+	Added information from old CedarConfig.h.in file, which is now
+	automatically generated.
+	M    configure.ac
+
+2007-05-01  Patrick West <pwest@ucar.edu>
+
+	Moving to am instead of in files for automake
+	D    library/Makefile.in
+	A    library/Makefile.am
+
+2007-05-01  Patrick West <pwest@ucar.edu>
+
+	Work so far on reconfiguring Cedar++
+	M    library/Makefile.in
+	D    library/CedarConfig.h.in
+	D    library/TESTCedarReadParcods.h.cc
+	D    library/configure.in
+	M    library/CedarErrorHandler.cc
+	D    library/configure
+	A    library/checkParcod.cc
+	M    library/CedarFile.cc
+	A    library/CedarKinst.h
+	A    library/CedarParcods.h
+	M    library/CedarMessages.h
+	M    library/CedarCursor.h
+
+2007-05-01  Patrick West <pwest@ucar.edu>
+
+	Reworking configuration, make environment, renaming direcotries
+	D    configure
+	D    Makefile.in
+	A    conf
+	AM   conf/mkinstalldirs
+	AM   conf/depcomp
+	AM   conf/compile
+	AM   conf/missing
+	AM   conf/config.guess
+	AM   conf/config.sub
+	AM   conf/ltmain.sh
+	AM   conf/install-sh
+	D    configure.in
+	A    docs
+	D    helpers
+	A    configure.ac
+	D    documentation
+	A    Makefile.am
+
+2007-04-06  jgarcia
+
+	Added comment
+
+2007-04-05  Patrick West <pwest@ucar.edu>
+
+	Moved to new permanent location
+	A    http://subversion.ucar.edu/HAO/CEDAR
+	D    http://subversion.ucar.edu/HAO/oldHAO/CEDAR
+
+2006-10-10  Patrick West <pwest@ucar.edu>
+
+	cedardump to cedardumper
+
+2006-08-22  jgarcia
+
+	All projects related to CEDAR must be under the same directory
+
+2006-08-22  jgarcia
+
+	Initial Import
+
+;; Local Variables:
+;; coding: utf-8
+;; End:

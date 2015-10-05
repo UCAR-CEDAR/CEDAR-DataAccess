@@ -1,0 +1,104 @@
+     10 Jicamarca Peru I.S. Radar              -11.95       283.13       1.500    JRO
+     20 Arecibo P.R. I.S. Radar                 18.345      293.247      0.       ARO
+     25 MU I.S. Radar, Shigaraki Japan          34.8        136.1        0.       MUI
+     30 Millstone Hill I.S. Radar               42.61949781 288.50826657 0.146005 MLH
+     31 Millstone Hill (steerable uhf antenna)  42.61949781 288.50826657 0.146005 MLH
+     32 Millstone Hill (zenith uhf antenna)     42.61949781 288.50826657 0.146005 MLH
+     33 Millstone Hill (steerable L-band ant.)  42.61949781 288.50826657 0.146005 MLH
+     40 Saint Santin I.S. Radar                 44.65       2.19         0.       STS
+     41 Saint Santin (Nancay receiver)          44.65       2.19         0.       STS
+     42 Saint Santin (Mende receiver)           44.65       2.19         0.       STS
+     43 Saint Santin (Montpazier receiver)      44.65       2.19         0.       STS
+     45 Kharkov Ukraine I.S. Radar              49.70       36.30        0.097    KKV
+     50 Chatanika AK I.S. Radar                 65.103      212.549      0.300    CHT
+     53 Irkutsk Russia I.S. Radar               52.9        103.3        0.502    IST
+     70 EISCAT I.S. Radar                       69.5847     19.2194      0.087    EIS
+     71 Kiruna (EISCAT) I.S. Radar              67.86066    20.43522     0.418    EIS
+     72 Tromso (EISCAT) I.S. Radar              69.5847     19.2194      0.087    EIS
+     73 Sodankyla (EISCAT) I.S. Radar           67.36369    26.62707     0.197    EIS
+     74 Tromso (EISCAT) VHF Radar               69.5847     19.2194      0.087    EIS
+     80 Sondrestrom I.S. Radar                  66.99       -50.95       0.180    SON
+     95 Svalbard I.S. Radar                     78.153      16.029       0.438    ESR
+    110 Global Positioning System Receivers    -999.                              GPS
+    120 Interplanetary Mag Fld and Solar Wind  -999.                              IMF
+    170 Spacecraft Particle Flux               -999.                              PFX
+    175 Estimated Hemispheric Power            -999.                              EHP
+    180 Midnight Equatorward Boundary          -999.                              EQB
+    210 Geophysical indices from NGDC: Lenhart -999.                              GPI
+    211 Geophysical indices from NGDC: AE      -999.                              AEI
+    212 Geophysical indices from NGDC: Dst     -999.                              DST
+    220 Polar Cap Geomagnetic Index: Vostok    -78.45       106.87       3.50     PCV
+    221 Polar Cap Geomagnetic Index: Thule      76.53       291.56                PCT
+    310 NCAR TGCM/TIGCM Model Output           -999.                              GCM
+    311 AMIE Model Output                      -999.                              ARE
+    320 Forbes/Vial Model Semidiurnal Tides    -999.                              SDT
+    321 Vial/Forbes Model Lunar Tides          -999.                              SDL
+    322 GSWM solar diurnal & semidiurnal tides -999.                              GSW
+    820 Halley Antarctica HF Radar             -75.5        333.4                 HHF
+    825 SANAE Antarctica HF Radar              -71.68        -2.85                SAN
+    830 Syowa Antarctica HF Radar              -69.00        39.58                SYF
+    831 Syowa East (Antarctica) HF Radar       -69.00        39.58                SYE
+    835 Kerguelen Is. HF radar                 -49.35        70.28                KGF
+    845 Kapuskasing HF Radar                    49.39       277.68                KHF
+    861 Saskatoon HF Radar                      52.16       253.47                SHF
+    870 Goose Bay HF Radar                      53.32       299.54                GBF
+    900 Hankasalmi Finland HF Radar             62.32        26.61                FHF
+    910 Stokkseyri (Iceland West) HF Radar      63.86       337.98                WHF
+    911 Pykkvibaer (Iceland East) HF Radar      63.77       339.46                EHF
+   1040 Arecibo P.R. MST Radar                  18.345      293.247      0.       ARM
+   1140 Poker Flat Alaska MST Radar             65.133     -147.460               PKR
+   1210 Scott Base Antarctica MF Radar         -77.85       166.75                SBF
+   1215 Davis, Antarctica MF radar             -68.60        77.97       0.001    DAV
+   1220 Mawson Antarctica MF Radar             -67.62        62.89                MAF
+   1221 Rothera, Antarctica MF RADAR           -67.57        68.12       0.005    RTH
+   1230 Christchurch New Zealand MF Radar      -43.83       172.68                CCF
+   1240 Adelaide Australia MF Radar            -34.56       138.48                ADF
+   1245 Rarotonga Cook Islands MF RADAR        -21.21      -159.77       0.002    RTG
+   1254 Tirunveli India MF radar                 8.67        77.82       0.030    TIR
+   1270 Kauai, Hawaii MF RADAR                  22.0       -159.3        0.002    KAU
+   1275 Yamagawa Japan MF radar                 31.20       130.62       0.070    YAM
+   1285 Platteville, Colorado MF RADAR          40.18      -104.7        1.505    PLR
+   1310 Wakkanai Japan MF radar                 45.36       141.81       0.010    WAK
+   1320 Collm LF Radar                          51.31        13.003               COF
+   1340 Saskatoon Canada MF Radar               52.21      -107.12       0.519    SAF
+   1375 Poker Flat Alaska MF Radar              65.126     -147.495      0.208    RPK
+   1390 Tromso Norway MF Radar                  69.583      19.210       0.030    TRF
+   1539 Ascension Island Meteor RADAR           -7.96      -14.38        0.170    ASC
+   1560 Atlanta Georgia Meteor Wind Radar       34.         276.                  ATM
+   1620 Durham N Hampshire Meteor Wind Radar    43.12       289.06                DUM
+   1750 Obninsk Russia Meteor Wind Radar        55.11       36.51        0.172    OBN
+   1775 Esrange, Sweden Meteor RADAR            67.89       21.08        0.320    EMR
+   2090 Christmas Island ST (MEDAC) Radar        2.20       202.60                CIA
+   2200 Platteville Colorado ST (MEDAC) Radar   40.13       255.5                 PLA
+   2890 Sondre Stromfjord Digisonde             67.00       309.05       0.180    SSD
+   2930 Qaanaaq Greenland Digisonde             77.5        290.6                 QAD
+   3010 Davis Antarctica Spectrometer          -68.48        77.97       0.025    DVS
+   3320 Wuppertal Germany OH Spectrometer       51.3          7.2                 WUP
+   4335 Abastumani Photometers                  41.80        42.80       1.679    AOP
+   4470 Poker Flat 4 Channel Photometer         65.12      -147.43                P4P
+   4473 Fort Yukon Alaska 4 Channel Photometer  66.57      -145.27       0.250    Y4P
+   5000 South Pole Fabry-Perot Interfer Spectr -90.00         0.         2.835    SPF
+   5020 Halley Antarctica Fabry-Perot          -75.5        333.4        0.       HFP
+   5060 Mount John New Zealand Fabry-Perot     -43.98       170.42                MJF
+   5140 Arequipa, Peru Fabry-Perot             -16.5        288.5                 AQF
+   5160 Arecibo P.R. Fabry-Perot                18.345      293.247      0.       AFP
+   5190 Kitt Pk H-alpha Fabry-Perot (WHAM)      31.98      -101.60       2.120    KHA
+   5300 Peach Mountain Fabry-Perot              42.40       273.07       0.291    PFP
+   5340 Millstone Hill Fabry-Perot              42.61949781 288.50826657 0.146005 MFP
+   5430 Watson Lake, Canada Fabry-Perot         60.06      -128.58                WFP
+   5460 College Fabry-Perot                     64.7       -148.1                 CFP
+   5465 Poker Flat AK Scanning Imaging F-P Spec 65.12      -147.43       0.440    PKF
+   5480 Sondre Stromfjord Fabry-Perot           66.99       -50.95       0.180    SFP
+   5510 Inuvik NWT Fabry-Perot Interferometer   68.33      -133.50       0.1032   IKF
+   5540 Thule Greenland Fabry-Perot             76.53       -68.44                TFP
+   5700 South Pole, Antarctica Michelson Inter.-90.00         0.         2.835    SPM
+   5720 Daytona Beach FL, USA Michelson Inter.  29.19       -81.05       0.000    DBM
+   5860 Stockholm Sweden IR Michelson Interfer. 59.5         18.2                 STM
+   5900 Sondrestrom Fjord Michelson Interfer.   66.99       -50.95        .180    SFM
+   5950 Resolute Bay, Canada Michelson Interf.  74.68       -94.90        .001    RBM
+   5980 Eureka, Canada Michelson Interferometer 80.22       -86.18        .139    EUM
+   6300 U of Illinois LIDAR                    -998.                              UIL
+   6320 Colorado State Sodium LIDAR             40.59      -105.14       1.5      CSL
+   6330 USU ALO Rayleigh LIDAR                  41.74      -111.81       1.466    USL
+   7191 USU Mesospheric Temp Mapper CCD Imager -998.                              MTM
+   7240 Millstone Hill Imager                   42.61949781 288.50826657 0.146005

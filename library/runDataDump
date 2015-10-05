@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# runDataDump runs cedardump against the data in /project/cedar/data and
+# outputs the results of each run to the <name of data file>.out. You can
+# then use diffDataDump to diff the results from two different cedardump
+# binaries, one from your development directory and one from the currently
+# released directory
+
+for i in /project/cedar/data/*.cbf
+do
+    bas=`basename $i`
+    ./cedardump $i > ${bas}.out
+done

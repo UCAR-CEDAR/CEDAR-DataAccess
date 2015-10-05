@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# diffDataDump is a script that will diff all the output run from two
+# separate directories (presumably your development directory compared to
+# the currently released Cedar library) using the runDataDump script.
+
+diffTo=$1
+if [ "$diffTo" == "" ]
+then
+    echo "usage: $0 <compare dir>"
+    exit 1
+fi
+
+if [ ! -d $diffTo ]
+then
+    echo "usage: $0 <compare dir>"
+    exit 1
+fi
+
+> diff.out
+for i in *.out
+do
+    echo "**** $i ****" >> diff.out
+    diff $i $diffTo/$i >> diff.out
+done
+
